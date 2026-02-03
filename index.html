@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交通安全教育啓発活動 | 一般社団法人ジャパンアクションギルド</title>
+    <!-- Tailwind CSS (デザイン用) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons (アイコン用) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+        /* カスタムスクロールバー */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e3a8a;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #172554;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-gray-900 bg-white antialiased">
+
+    <!-- Top Bar (Official Look) -->
+    <div class="bg-gray-100 border-b border-gray-300 py-1 text-xs">
+        <div class="container mx-auto px-4 flex justify-between items-center text-gray-600">
+            <span>交通安全教育啓発活動（スケアード・ストレート技法）</span>
+            <div class="flex gap-4">
+                <span class="cursor-pointer hover:underline">文字サイズ・色合い変更</span>
+                <span class="cursor-pointer hover:underline">サイトマップ</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header id="main-header" class="w-full bg-white border-b-4 border-blue-900 transition-all duration-300 z-50 relative">
+        <div class="container mx-auto px-4 py-4 md:py-6 flex justify-between items-center">
+            <div class="flex flex-col">
+                <div class="flex items-center gap-3 mb-1">
+                    <div class="bg-blue-900 text-white px-2 py-1 text-xs font-serif font-bold tracking-widest border border-blue-900">
+                        一般社団法人
+                    </div>
+                    <h1 class="text-xl md:text-3xl font-bold text-gray-900 tracking-tight font-serif flex items-center gap-2">
+                        <i data-lucide="shield" class="text-yellow-600 fill-current w-8 h-8"></i>
+                        ジャパンアクションギルド
+                    </h1>
+                </div>
+                <p class="text-xs md:text-sm text-gray-600 font-bold ml-1">Traffic Safety Education Division - 交通安全教育事業部</p>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-1">
+                <a href="#law" class="px-4 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">法改正情報</a>
+                <a href="#message" class="px-4 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">実施の意義</a>
+                <a href="#program" class="px-4 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">実施演目</a>
+                <a href="#faq" class="px-4 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">Q&A</a>
+                <a href="#contact" class="ml-4 bg-blue-900 hover:bg-blue-800 text-white px-6 py-3 text-sm font-bold flex items-center gap-2 transition border-b-4 border-blue-950 active:border-b-0 active:translate-y-1">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    お問い合わせ
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden p-2 text-gray-800 border border-gray-300 rounded bg-gray-50">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden bg-gray-100 border-t border-gray-300 md:hidden">
+            <div class="container mx-auto px-4 py-2 flex flex-col divide-y divide-gray-300">
+                <a href="#law" class="mobile-link py-3 text-gray-700 font-medium hover:bg-gray-50 hover:text-blue-900 flex justify-between items-center">
+                    法改正情報 <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+                <a href="#message" class="mobile-link py-3 text-gray-700 font-medium hover:bg-gray-50 hover:text-blue-900 flex justify-between items-center">
+                    実施の意義 <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+                <a href="#program" class="mobile-link py-3 text-gray-700 font-medium hover:bg-gray-50 hover:text-blue-900 flex justify-between items-center">
+                    実施演目 <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+                <a href="#faq" class="mobile-link py-3 text-gray-700 font-medium hover:bg-gray-50 hover:text-blue-900 flex justify-between items-center">
+                    よくある質問 <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+                <a href="#contact" class="mobile-link py-3 text-blue-900 font-bold flex items-center gap-2">
+                    <i data-lucide="mail" class="w-5 h-5"></i> お問い合わせ
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section: Official Notice Style -->
+    <section class="bg-gray-50 border-b border-gray-200">
+        <div class="container mx-auto px-4 py-12 md:py-16">
+            <div class="bg-white border border-gray-300 shadow-sm p-6 md:p-10 flex flex-col md:flex-row gap-10 items-start">
+                <div class="md:w-3/5">
+                    <div class="inline-block bg-red-700 text-white px-3 py-1 text-sm font-bold mb-4">
+                        重要なお知らせ
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-serif text-gray-900 leading-tight mb-6 border-b-2 border-red-700 pb-4">
+                        【重要】道路交通法改正に伴う<br/>
+                        自転車交通安全教育の強化について
+                    </h2>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6 font-medium text-justify">
+                        令和8年4月1日より、自転車に対する<span class="text-red-700 font-bold underline decoration-2 underline-offset-4">交通反則通告制度（青切符）</span>が導入されます。
+                        本改正により、16歳以上の生徒に対する法的責任が厳格化されます。
+                    </p>
+                    <div class="bg-blue-50 border-l-4 border-blue-800 p-4 mb-8">
+                        <p class="text-blue-900 font-bold text-sm md:text-base">
+                            学校・教育機関においては、従来の「マナー指導」に留まらず、
+                            事故の現実（恐怖）を直視させる実践的教育（スケアード・ストレート）の導入が急務です。
+                        </p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="#contact" class="bg-blue-900 hover:bg-blue-800 text-white px-8 py-3 font-bold text-sm md:text-base flex items-center gap-2 shadow-sm transition">
+                            実施に関するご相談・お見積り
+                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-2/5 w-full">
+                    <div class="border border-gray-300 bg-gray-100 p-1">
+                        <div class="relative h-64 md:h-80 w-full bg-black">
+                           <!-- 0.jpg: メインビジュアル -->
+                           <img 
+                            src="0.jpg" 
+                            alt="自転車事故再現" 
+                            class="w-full h-full object-cover opacity-90"
+                            onerror="this.src='https://placehold.co/600x400?text=Image+Not+Found';this.style.opacity=1;"
+                          />
+                          <div class="absolute bottom-0 left-0 bg-black/70 text-white text-xs px-2 py-1">
+                            JAGによる事故再現実演（資料映像）
+                          </div>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-2 px-1">
+                          ※写真はスケアード・ストレート（恐怖の直視）技法による事故再現の様子です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics: Law Changes -->
+    <section id="law" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="mb-10 border-b border-gray-300 pb-2">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 font-serif flex items-center gap-3">
+                    <div class="w-2 h-8 bg-blue-900"></div>
+                    道路交通法改正の概要
+                </h2>
+                <p class="text-xs text-gray-500 font-bold tracking-widest mt-1 ml-5 pl-0.5">PENALTY SYSTEM REVISION</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-10">
+                <!-- Box 1 -->
+                <div class="border border-gray-300 flex flex-col">
+                    <div class="bg-blue-900 text-white px-4 py-2 font-bold flex justify-between items-center">
+                        <span>反則金制度（青切符）の導入</span>
+                        <span class="text-xs bg-white text-blue-900 px-2 py-0.5 font-bold">令和8年4月1日施行</span>
+                    </div>
+                    <div class="p-6 bg-gray-50 h-full">
+                        <p class="text-sm text-gray-700 mb-4 leading-relaxed">
+                            自転車の交通違反に対し、反則金を納付させる制度です。違反処理の効率化と、規範意識の向上を目的としています。
+                        </p>
+                        <table class="w-full text-sm text-left border-collapse border border-gray-300 bg-white">
+                            <tbody>
+                                <tr class="border-b border-gray-300">
+                                    <th class="p-3 bg-gray-100 font-bold border-r border-gray-300 w-1/3">対象年齢</th>
+                                    <td class="p-3">16歳以上（原則）</td>
+                                </tr>
+                                <tr class="border-b border-gray-300">
+                                    <th class="p-3 bg-gray-100 font-bold border-r border-gray-300">対象違反</th>
+                                    <td class="p-3">信号無視、一時不停止など113種類</td>
+                                </tr>
+                                <tr>
+                                    <th class="p-3 bg-gray-100 font-bold border-r border-gray-300">反則金</th>
+                                    <td class="p-3">5,000円 〜 12,000円程度（目安）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="border border-gray-300 flex flex-col">
+                    <div class="bg-red-800 text-white px-4 py-2 font-bold flex justify-between items-center">
+                        <span>重大違反の厳罰化（赤切符等）</span>
+                        <span class="text-xs bg-white text-red-800 px-2 py-0.5 font-bold">施行済み</span>
+                    </div>
+                    <div class="p-6 bg-gray-50 h-full">
+                        <p class="text-sm text-gray-700 mb-4 leading-relaxed">
+                            重大な事故に直結する以下の行為については、懲役刑を含む厳しい罰則が適用されます。
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3 p-3 border border-red-200 bg-red-50">
+                                <i data-lucide="smartphone" class="text-red-700 shrink-0 w-5 h-5 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-red-800 text-sm">ながら運転（保持・注視）</h4>
+                                    <p class="text-xs text-gray-700 mt-1">6月以下の拘禁刑 または 10万円以下の罰金<br/>（危険を生じさせた場合：1年以下 / 30万円以下）</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-3 border border-red-200 bg-red-50">
+                                <i data-lucide="users" class="text-red-700 shrink-0 w-5 h-5 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-red-800 text-sm">酒気帯び運転・幇助</h4>
+                                    <p class="text-xs text-gray-700 mt-1">3年以下の拘禁刑 または 50万円以下の罰金<br/>（自転車提供者・酒類提供者・同乗者も対象）</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-yellow-50 border border-yellow-200 p-4 flex items-start gap-3 text-sm text-gray-800">
+                <i data-lucide="info" class="text-yellow-600 shrink-0 w-5 h-5 mt-1"></i>
+                <div>
+                    <span class="font-bold text-gray-900 block mb-1">自転車運転者講習制度について</span>
+                    危険行為を3年以内に2回以上繰り返した14歳以上の者には、都道府県公安委員会より講習の受講が命じられます（受講手数料：6,000円 / 時間：3時間）。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serious Message Section -->
+    <section id="message" class="py-20 bg-gray-100 border-t border-b border-gray-300">
+        <div class="container mx-auto px-4">
+            <div class="mb-10 border-b border-gray-300 pb-2">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 font-serif flex items-center gap-3">
+                    <div class="w-2 h-8 bg-blue-900"></div>
+                    自転車事故の社会的責任とリスク
+                </h2>
+                <p class="text-xs text-gray-500 font-bold tracking-widest mt-1 ml-5 pl-0.5">SOCIAL RESPONSIBILITY</p>
+            </div>
+
+            <div class="max-w-5xl mx-auto bg-white border border-gray-300 p-8 md:p-12 shadow-sm">
+                <div class="text-center mb-10">
+                    <h3 class="text-2xl md:text-3xl font-bold font-serif text-gray-900 mb-6">
+                        「たかが自転車」という認識が、<br/>
+                        <span class="text-red-700 border-b-4 border-red-700 pb-1">一生を台無しにする</span>可能性があります。
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed text-lg font-medium">
+                        自転車は「車両」です。<br class="md:hidden"/>
+                        万が一、加害者となってしまった場合、<br/>
+                        未成年であっても容赦のない社会的・経済的責任が問われます。
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="border-t-4 border-red-700 bg-gray-50 p-6">
+                        <div class="flex justify-center mb-4">
+                            <i data-lucide="gavel" class="text-red-800 w-12 h-12"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-center mb-3">多額の損害賠償</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed text-justify">
+                            過去の判例では、小学生が起こした自転車事故に対し、保護者に<span class="font-bold text-red-700">約9,500万円</span>の賠償命令が下された事例があります。自己破産に追い込まれるケースも少なくありません。
+                        </p>
+                    </div>
+                    <div class="border-t-4 border-red-700 bg-gray-50 p-6">
+                        <div class="flex justify-center mb-4">
+                            <i data-lucide="alert-octagon" class="text-red-800 w-12 h-12"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-center mb-3">刑事上の責任</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed text-justify">
+                            相手を死傷させた場合、「重過失致死傷罪」などに問われます。14歳以上であれば逮捕・勾留される可能性もあり、進学や就職に重大な影響を及ぼす「前科」がつく恐れがあります。
+                        </p>
+                    </div>
+                    <div class="border-t-4 border-red-700 bg-gray-50 p-6">
+                        <div class="flex justify-center mb-4">
+                            <i data-lucide="shield" class="text-red-800 w-12 h-12"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-center mb-3">被害者への道義的責任</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed text-justify">
+                            何より、被害者の人生を奪ってしまったという事実は消えません。一生涯、罪の意識を背負って生きていくことになります。「知らなかった」では済まされないのです。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-10 bg-blue-50 border border-blue-200 p-6 text-center">
+                    <h4 class="text-blue-900 font-bold text-lg mb-2">学校法人・PTA・自治会の皆様へ</h4>
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed">
+                        こうした悲劇を未然に防ぐためには、言葉だけの指導では不十分です。<br/>
+                        <span class="font-bold">「痛み」と「恐怖」を伴う擬似体験（スケアード・ストレート）</span>こそが、<br/>
+                        子供たちの心に深く刻まれ、具体的な行動変容を促す唯一の教育手法であると、私たちは確信しています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Scared Straight -->
+    <section id="about" class="py-16 bg-white border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="mb-10 border-b border-gray-300 pb-2">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 font-serif flex items-center gap-3">
+                    <div class="w-2 h-8 bg-blue-900"></div>
+                    スケアード・ストレート教育技法
+                </h2>
+                <p class="text-xs text-gray-500 font-bold tracking-widest mt-1 ml-5 pl-0.5">EDUCATIONAL METHOD</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-stretch">
+                <div class="md:w-1/2 bg-white border border-gray-300 p-6 md:p-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 border-l-4 border-blue-900 pl-3">
+                        恐怖の直視による抑止効果
+                    </h3>
+                    <p class="text-gray-700 leading-7 mb-6 text-sm md:text-base text-justify">
+                        「スケアード・ストレート（Scared Straight）」とは、恐怖を直視させることによって、危険行為を未然に防ぐ教育手法です。
+                        <br/><br/>
+                        自転車交通安全教室においては、スタントマンが実際の交通事故現場を再現します。
+                        自動車と自転車が衝突する際の「衝撃音」や、事故直後の「無残な状況」を目の当たりにすることで、
+                        生徒の心に<span class="font-bold text-red-700">「事故への恐怖心」</span>を芽生えさせ、
+                        交通ルール遵守の必要性を自発的に理解させます。
+                    </p>
+                    <div class="bg-gray-100 p-4 border border-gray-200">
+                        <h4 class="font-bold text-sm text-gray-800 mb-2">一般社団法人ジャパンアクションギルドの強み</h4>
+                        <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                            <li>映画・ドラマ等の撮影現場で培った高度なスタント技術</li>
+                            <li>徹底した安全管理体制（リハーサル・導線確認の徹底）</li>
+                            <li>警察官による講話と連携した、教育的シナリオの構築</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex flex-col gap-4">
+                    <div class="h-1/2 relative bg-black border border-gray-300">
+                        <!-- 1.jpg: 衝突再現 -->
+                        <img src="1.jpg" class="w-full h-full object-cover opacity-90" alt="衝突再現" onerror="this.src='https://placehold.co/600x400?text=Image+1';this.style.opacity=1;">
+                        <span class="absolute bottom-0 right-0 bg-black/60 text-white text-xs px-2 py-1">スタント実演イメージ</span>
+                    </div>
+                    <div class="h-1/2 relative bg-black border border-gray-300">
+                        <!-- 7.jpg: 警察連携 (リポジトリに2.jpgがなく7.jpgがあるため変更) -->
+                        <img src="7.jpg" class="w-full h-full object-cover opacity-90" alt="警察連携イメージ" onerror="this.src='https://placehold.co/600x400?text=Image+2';this.style.opacity=1;">
+                        <span class="absolute bottom-0 right-0 bg-black/60 text-white text-xs px-2 py-1">警察・行政との連携</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program -->
+    <section id="program" class="py-16 bg-gray-50 border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="mb-10 border-b border-gray-300 pb-2">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 font-serif flex items-center gap-3">
+                    <div class="w-2 h-8 bg-blue-900"></div>
+                    主な実施演目・再現事例
+                </h2>
+                <p class="text-xs text-gray-500 font-bold tracking-widest mt-1 ml-5 pl-0.5">PROGRAM EXAMPLES</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <!-- 3.jpg: 実施風景 -->
+                <div class="col-span-1 md:col-span-2 mb-6 border border-gray-300">
+                     <div class="bg-black/80 text-white px-4 py-2 font-bold text-sm flex items-center gap-2">
+                        <i data-lucide="camera" class="w-4 h-4"></i>
+                        演目実施風景（スケアードストレート）
+                     </div>
+                     <img src="3.jpg" class="w-full h-64 md:h-80 object-cover" alt="実施演目イメージ" onerror="this.src='https://placehold.co/800x400?text=Image+3';">
+                </div>
+
+                <!-- Program Item -->
+                <div class="flex items-start gap-4 p-4 border border-gray-300 bg-white hover:bg-gray-50 transition">
+                    <i data-lucide="check-circle" class="text-blue-900 shrink-0 w-5 h-5 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base mb-1">時速40kmでの衝突実験</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">走行中の自動車と自転車を衝突させ、速度超過の危険性と衝撃の大きさを実証します。</p>
+                    </div>
+                </div>
+                <!-- Program Item -->
+                <div class="flex items-start gap-4 p-4 border border-gray-300 bg-white hover:bg-gray-50 transition">
+                    <i data-lucide="check-circle" class="text-blue-900 shrink-0 w-5 h-5 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base mb-1">ながら運転・傘差し運転の危険性</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">スマートフォン操作や傘差しによる片手運転が、いかにバランスを崩しやすく危険かを示します。</p>
+                    </div>
+                </div>
+                <!-- Program Item -->
+                <div class="flex items-start gap-4 p-4 border border-gray-300 bg-white hover:bg-gray-50 transition">
+                    <i data-lucide="check-circle" class="text-blue-900 shrink-0 w-5 h-5 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base mb-1">見通しの悪い交差点（出会い頭）</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">一時停止を怠った自転車が、交差点進入時に自動車と衝突する事例を再現します。</p>
+                    </div>
+                </div>
+                <!-- Program Item -->
+                <div class="flex items-start gap-4 p-4 border border-gray-300 bg-white hover:bg-gray-50 transition">
+                    <i data-lucide="check-circle" class="text-blue-900 shrink-0 w-5 h-5 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base mb-1">大型車両の内輪差・巻き込み</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">左折する大型トラック等の内輪差による巻き込み事故を再現し、死角の危険性を学びます。</p>
+                    </div>
+                </div>
+                <!-- Program Item -->
+                <div class="flex items-start gap-4 p-4 border border-gray-300 bg-white hover:bg-gray-50 transition">
+                    <i data-lucide="check-circle" class="text-blue-900 shrink-0 w-5 h-5 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base mb-1">ドア開放事故</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">駐停車中の自動車のドアが突然開き、後方から来た自転車が衝突する事例です。</p>
+                    </div>
+                </div>
+                <!-- Program Item -->
+                <div class="flex items-start gap-4 p-4 border border-gray-300 bg-white hover:bg-gray-50 transition">
+                    <i data-lucide="check-circle" class="text-blue-900 shrink-0 w-5 h-5 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base mb-1">右直事故（サンキュー事故）</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">右折車と直進自転車による衝突事故（通称：右直事故）のメカニズムを解説します。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-sm text-gray-600 mb-4">
+                    ※実施場所（グラウンド・体育館等）の広さや環境に応じ、最適な演目を構成いたします。<br/>
+                    ※雨天時は、車両を使用しない屋内向けプログラムへの変更も可能です。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-white border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="mb-10 border-b border-gray-300 pb-2">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 font-serif flex items-center gap-3">
+                    <div class="w-2 h-8 bg-blue-900"></div>
+                    よくあるご質問
+                </h2>
+                <p class="text-xs text-gray-500 font-bold tracking-widest mt-1 ml-5 pl-0.5">Q&A</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- FAQ Item -->
+                <div class="border border-gray-300 bg-white">
+                    <div class="flex items-start gap-3 p-4 bg-gray-50 border-b border-gray-200">
+                        <i data-lucide="help-circle" class="text-blue-900 shrink-0 w-5 h-5 mt-0.5"></i>
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">実施にはどのくらいの時間がかかりますか？</h4>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="font-bold text-red-700 shrink-0">A.</div>
+                        <p class="text-sm text-gray-700 leading-relaxed">通常、1回の実施で45分〜50分程度です。学校の授業時間（1コマ）に合わせて構成することが可能です。</p>
+                    </div>
+                </div>
+                <!-- FAQ Item -->
+                <div class="border border-gray-300 bg-white">
+                    <div class="flex items-start gap-3 p-4 bg-gray-50 border-b border-gray-200">
+                         <i data-lucide="help-circle" class="text-blue-900 shrink-0 w-5 h-5 mt-0.5"></i>
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">雨天の場合、実施はどうなりますか？</h4>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="font-bold text-red-700 shrink-0">A.</div>
+                        <p class="text-sm text-gray-700 leading-relaxed">雨天の場合はグラウンドが使用できないため、体育館での実施に変更となります。その際は、車両を使用しないプログラムとなりますが、マット運動などを活用したスタントで同様の教育効果を提供します。</p>
+                    </div>
+                </div>
+                <!-- FAQ Item -->
+                <div class="border border-gray-300 bg-white">
+                    <div class="flex items-start gap-3 p-4 bg-gray-50 border-b border-gray-200">
+                         <i data-lucide="help-circle" class="text-blue-900 shrink-0 w-5 h-5 mt-0.5"></i>
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">実施に必要なスペースはどのくらいですか？</h4>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="font-bold text-red-700 shrink-0">A.</div>
+                        <p class="text-sm text-gray-700 leading-relaxed">屋外（グラウンド）の場合は「20m × 60m」、屋内（体育館）の場合は「15m × 35m」以上のスペースを推奨しております。</p>
+                    </div>
+                </div>
+                <!-- FAQ Item -->
+                <div class="border border-gray-300 bg-white">
+                    <div class="flex items-start gap-3 p-4 bg-gray-50 border-b border-gray-200">
+                         <i data-lucide="help-circle" class="text-blue-900 shrink-0 w-5 h-5 mt-0.5"></i>
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">どのような事故シーンを再現できますか？</h4>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="font-bold text-red-700 shrink-0">A.</div>
+                        <p class="text-sm text-gray-700 leading-relaxed">「見通しの悪い交差点」「横断歩道事故」「ドア開放事故」「大型トラック巻き込み」など、地域の事故発生状況に合わせてカスタマイズ可能です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flow & Contact -->
+    <section id="flow" class="py-16 bg-blue-50 border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="mb-10 border-b border-gray-300 pb-2">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 font-serif flex items-center gap-3">
+                    <div class="w-2 h-8 bg-blue-900"></div>
+                    導入・実施までの流れ
+                </h2>
+                <p class="text-xs text-gray-500 font-bold tracking-widest mt-1 ml-5 pl-0.5">FLOW</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white border border-gray-300 p-6 md:p-10 mb-12">
+                <ol class="relative border-l border-gray-300">                  
+                    <li class="mb-8 ml-6">
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-900 rounded-full -left-4 ring-4 ring-white text-white font-bold text-sm">1</span>
+                        <h3 class="flex items-center mb-1 text-lg font-bold text-gray-900">お問い合わせ</h3>
+                        <p class="mb-4 text-sm font-normal text-gray-600">実施希望時期、場所、対象人数等をお知らせください。</p>
+                    </li>
+                    <li class="mb-8 ml-6">
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-900 rounded-full -left-4 ring-4 ring-white text-white font-bold text-sm">2</span>
+                        <h3 class="flex items-center mb-1 text-lg font-bold text-gray-900">詳細打ち合わせ・現地確認</h3>
+                        <p class="mb-4 text-sm font-normal text-gray-600">実施スペース、搬入経路、電源設備等の確認を行います。</p>
+                    </li>
+                    <li class="mb-8 ml-6">
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-900 rounded-full -left-4 ring-4 ring-white text-white font-bold text-sm">3</span>
+                        <h3 class="flex items-center mb-1 text-lg font-bold text-gray-900">お見積り・ご契約</h3>
+                        <p class="mb-4 text-sm font-normal text-gray-600">実施内容に基づき、お見積書を作成いたします。</p>
+                    </li>
+                    <li class="mb-8 ml-6">
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-900 rounded-full -left-4 ring-4 ring-white text-white font-bold text-sm">4</span>
+                        <h3 class="flex items-center mb-1 text-lg font-bold text-gray-900">関係各所への周知</h3>
+                        <p class="mb-4 text-sm font-normal text-gray-600">保護者、近隣住民、管轄警察署への連絡・調整を行います。</p>
+                    </li>
+                    <li class="mb-8 ml-6">
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-900 rounded-full -left-4 ring-4 ring-white text-white font-bold text-sm">5</span>
+                        <h3 class="flex items-center mb-1 text-lg font-bold text-gray-900">実施当日</h3>
+                        <p class="mb-4 text-sm font-normal text-gray-600">スタッフは開始約2時間前に会場入りし、設営・リハーサルを行います。</p>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Contact Box -->
+            <div id="contact" class="max-w-4xl mx-auto">
+                <div class="bg-white border-2 border-blue-900 shadow-sm">
+                    <div class="bg-blue-900 text-white p-4 text-center">
+                        <h3 class="text-xl md:text-2xl font-bold font-serif">
+                            お問い合わせ・ご相談窓口
+                        </h3>
+                    </div>
+                    
+                    <div class="p-8 md:p-12 text-center">
+                        <p class="text-gray-700 mb-8 text-sm md:text-base font-medium">
+                            開催のご相談、お見積りのご依頼は、下記より受け付けております。<br/>
+                            学校法人、PTA、自治体、警察署のご担当者様はお気軽にご連絡ください。
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-10">
+                            <!-- LINE Contact -->
+                            <div class="flex flex-col h-full">
+                                <a href="#" class="flex-1 bg-[#06C755] hover:bg-[#05b54b] text-white font-bold py-6 px-4 flex flex-col items-center justify-center gap-2 transition border-b-4 border-[#048c3b] active:border-b-0 active:translate-y-1 rounded-sm shadow-sm">
+                                    <div class="flex items-center gap-2 text-xl">
+                                        <i data-lucide="smartphone" class="w-7 h-7"></i>
+                                        <span>LINEでお問い合わせ</span>
+                                    </div>
+                                    <span class="text-xs font-normal bg-white/20 px-2 py-0.5 rounded">24時間受付中</span>
+                                </a>
+                                <p class="text-xs text-gray-500 mt-2 text-center">
+                                    ※「交通安全教室の件」とメッセージをお送りください。
+                                </p>
+                            </div>
+
+                            <!-- Mail Contact -->
+                            <div class="flex flex-col h-full">
+                                <a href="mailto:contact@japanactionguild.jp" class="flex-1 bg-gray-100 hover:bg-gray-200 text-blue-900 font-bold py-6 px-4 flex flex-col items-center justify-center gap-2 transition border-b-4 border-gray-300 active:border-b-0 active:translate-y-1 rounded-sm shadow-sm border border-gray-200">
+                                    <div class="flex items-center gap-2 text-xl">
+                                        <i data-lucide="mail" class="w-7 h-7"></i>
+                                        <span>メールでお問い合わせ</span>
+                                    </div>
+                                    <span class="text-xs font-normal text-gray-600">contact@japanactionguild.jp</span>
+                                </a>
+                                <p class="text-xs text-gray-500 mt-2 text-center">
+                                    ※2営業日以内に担当者より返信いたします。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-gray-200 pt-6 mt-6">
+                            <div class="inline-block text-left">
+                                <p class="text-sm text-gray-800 font-bold mb-1">
+                                    一般社団法人ジャパンアクションギルド
+                                </p>
+                                <p class="text-sm text-gray-600">
+                                    交通安全教育事業部
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Official Style) -->
+    <footer class="bg-blue-900 text-white py-8 border-t-4 border-yellow-600">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
+                <div>
+                    <h2 class="text-lg font-bold font-serif tracking-widest mb-1">一般社団法人ジャパンアクションギルド</h2>
+                    <p class="text-xs text-blue-200">Japan Action Guild - Traffic Safety Education Division</p>
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="hover:underline text-white">団体概要</a>
+                    <a href="#" class="hover:underline text-white">プライバシーポリシー</a>
+                    <a href="#" class="hover:underline text-white">特定商取引法に基づく表記</a>
+                </div>
+            </div>
+            <div class="text-center md:text-left border-t border-blue-800 pt-6">
+                <p class="text-xs text-blue-300">
+                    Copyright © Japan Action Guild. All Rights Reserved.<br/>
+                    本サイトに掲載されている画像・文章の無断転載を禁じます。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('fixed', 'top-0', 'shadow-md');
+                header.classList.remove('relative');
+            } else {
+                header.classList.remove('fixed', 'top-0', 'shadow-md');
+                header.classList.add('relative');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                menuBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+            }
+            lucide.createIcons();
+        });
+
+        // Close mobile menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.add('hidden');
+                menuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
