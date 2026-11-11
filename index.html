@@ -70,8 +70,8 @@
                     </div>
                     <!-- Icon & Text -->
                     <div class="flex items-center gap-2">
-                        <i data-lucide="shield" class="text-yellow-600 w-6 h-6 md:w-8 md:h-8 fill-yellow-600/20 stroke-[2.5px]"></i>
-                        <h1 class="text-xl md:text-3xl font-black text-slate-900 tracking-tighter font-serif group-hover:text-blue-900 transition-colors">
+                        <span class="inline-flex items-center justify-center w-7 h-7 md:w-9 md:h-9 bg-green-700 rounded-sm shrink-0" aria-label="交通安全マーク"><svg viewBox="0 0 24 24" class="w-5 h-5 md:w-6 md:h-6" fill="#ffffff"><path d="M9.5 2h5v5h5v5h-5v5h-5v-5h-5V7h5z"/></svg></span>
+                        <h1 class="text-lg md:text-2xl xl:text-3xl font-black text-slate-900 tracking-tighter font-serif group-hover:text-blue-900 transition-colors whitespace-nowrap">
                             ジャパンアクションギルド
                         </h1>
                     </div>
@@ -86,12 +86,12 @@
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden lg:flex items-center gap-1">
-                <a href="#law" class="px-4 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">法改正情報</a>
-                <a href="#message" class="px-4 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">実施の意義</a>
-                <a href="#program" class="px-4 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">実施演目</a>
-                <a href="#nationwide" class="px-4 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">全国で実施</a>
-                <a href="#faq" class="px-4 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">Q&A</a>
+            <nav class="hidden xl:flex items-center gap-1">
+                <a href="#law" class="whitespace-nowrap px-3 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">法改正情報</a>
+                <a href="#message" class="whitespace-nowrap px-3 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">実施の意義</a>
+                <a href="#program" class="whitespace-nowrap px-3 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">実施演目</a>
+                <a href="#nationwide" class="whitespace-nowrap px-3 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">全国で実施</a>
+                <a href="#faq" class="whitespace-nowrap px-3 py-2 text-sm font-bold text-gray-600 border-b-2 border-transparent hover:text-blue-900 hover:border-gray-300 transition">Q&A</a>
                 
                 <!-- Header Contact Buttons -->
                 <div class="flex items-center gap-2 ml-4">
@@ -104,13 +104,13 @@
             </nav>
 
             <!-- Mobile Menu Toggle -->
-            <button id="menu-btn" class="lg:hidden p-2 text-gray-800 border border-gray-300 rounded bg-gray-50 hover:bg-gray-100 transition">
+            <button id="menu-btn" class="xl:hidden p-2 text-gray-800 border border-gray-300 rounded bg-gray-50 hover:bg-gray-100 transition">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
 
         <!-- Mobile Nav -->
-        <div id="mobile-menu" class="hidden bg-gray-100 border-t border-gray-300 lg:hidden">
+        <div id="mobile-menu" class="hidden bg-gray-100 border-t border-gray-300 xl:hidden">
             <div class="container mx-auto px-4 py-2 flex flex-col divide-y divide-gray-300">
                 <a href="#law" class="mobile-link py-3 text-gray-700 font-medium hover:bg-gray-50 hover:text-blue-900 flex justify-between items-center">
                     法改正情報 <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400"></i>
@@ -290,7 +290,7 @@
                     <p class="text-[10px] text-gray-400 mt-2">出典：警察庁</p>
                 </div>
                 <div class="bg-gray-50 border border-gray-200 rounded-sm p-5 text-center">
-                    <div class="text-3xl md:text-4xl font-black text-red-700">甄4件に1件</div>
+                    <div class="text-3xl md:text-4xl font-black text-red-700">約4件に1件</div>
                     <p class="text-xs md:text-sm text-gray-600 font-bold mt-2">全交通事故に占める割合。<br/>構成比は増加傾向</p>
                     <p class="text-[10px] text-gray-400 mt-2">出典：警察庁・国立国会図書館（2022年23.3%）</p>
                 </div>
@@ -300,7 +300,7 @@
                     <p class="text-[10px] text-gray-400 mt-2">出典：警察庁・日本経済新聞</p>
                 </div>
                 <div class="bg-gray-50 border border-gray-200 rounded-sm p-5 text-center">
-                    <div class="text-3xl md:text-4xl font-black text-blue-900">琄3/4</div>
+                    <div class="text-3xl md:text-4xl font-black text-blue-900">約3/4</div>
                     <p class="text-xs md:text-sm text-gray-600 font-bold mt-2">死亡・重傷事故のうち<br/>自転車側にも法令違反</p>
                     <p class="text-[10px] text-gray-400 mt-2">出典：警察庁（令和7年）</p>
                 </div>
@@ -562,6 +562,17 @@
                 <div class="border border-gray-300 bg-white">
                     <div class="flex items-start gap-3 p-4 bg-gray-50 border-b border-gray-200">
                         <i data-lucide="help-circle" class="text-blue-900 shrink-0 w-5 h-5 mt-0.5"></i>
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">費用はどれくらいかかりますか？</h4>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="font-bold text-red-700 shrink-0">A.</div>
+                        <p class="text-sm text-gray-700 leading-relaxed">実施場所や内容によって異なります。<strong>全国どこへでもお伺いします</strong>ので、まずはお気軽にお問い合わせください。ご予算やご希望に合わせて、個別にお見積りをご提案いたします。</p>
+                    </div>
+                </div>
+                <!-- FAQ Item -->
+                <div class="border border-gray-300 bg-white">
+                    <div class="flex items-start gap-3 p-4 bg-gray-50 border-b border-gray-200">
+                        <i data-lucide="help-circle" class="text-blue-900 shrink-0 w-5 h-5 mt-0.5"></i>
                         <h4 class="font-bold text-gray-900 text-sm md:text-base">実施にはどのくらいの時間がかかりますか？</h4>
                     </div>
                     <div class="p-4 flex items-start gap-3">
@@ -614,6 +625,7 @@
                 <p class="text-xs font-bold tracking-widest text-blue-900 mb-3">NATIONWIDE</p>
                 <h2 class="text-2xl md:text-4xl font-black font-serif text-gray-900">全国で実施されています。</h2>
                 <p class="text-gray-600 mt-4 text-sm md:text-base">北海道から沖縄まで、スタントマンによる交通安全教室（スケアード・ストレート方式）は<br class="hidden md:block"/>全国の学校・自治体で続々と行われています。</p>
+                <p class="mt-4 inline-block bg-blue-900 text-white text-sm md:text-base font-bold px-5 py-2 rounded-sm">全国どこへでもお伺いします。</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="bg-white border border-gray-200 rounded-sm p-5 shadow-sm hover:shadow-md transition"><div class="flex items-center justify-between mb-2"><span class="inline-block bg-blue-900 text-white text-xs font-bold px-2.5 py-1 rounded-sm">大阪府</span><span class="text-xs text-gray-400">2026.11</span></div><p class="text-sm font-bold text-gray-800 leading-snug">東大阪市 スタントマンが事故を再現する安全教室を開催</p><p class="text-xs text-gray-400 mt-2">関西テレビ</p></div><div class="bg-white border border-gray-200 rounded-sm p-5 shadow-sm hover:shadow-md transition"><div class="flex items-center justify-between mb-2"><span class="inline-block bg-blue-900 text-white text-xs font-bold px-2.5 py-1 rounded-sm">愛媛県</span><span class="text-xs text-gray-400">2026.11</span></div><p class="text-sm font-bold text-gray-800 leading-snug">新居浜高専で交通安全教室 「すごく衝撃」</p><p class="text-xs text-gray-400 mt-2">FNNプライム</p></div><div class="bg-white border border-gray-200 rounded-sm p-5 shadow-sm hover:shadow-md transition"><div class="flex items-center justify-between mb-2"><span class="inline-block bg-blue-900 text-white text-xs font-bold px-2.5 py-1 rounded-sm">山口県</span><span class="text-xs text-gray-400">2026.11</span></div><p class="text-sm font-bold text-gray-800 leading-snug">防府 生徒が自転車の危険性を学ぶ</p><p class="text-xs text-gray-400 mt-2">Google ニュース</p></div><div class="bg-white border border-gray-200 rounded-sm p-5 shadow-sm hover:shadow-md transition"><div class="flex items-center justify-between mb-2"><span class="inline-block bg-blue-900 text-white text-xs font-bold px-2.5 py-1 rounded-sm">愛知県</span><span class="text-xs text-gray-400">2026.11</span></div><p class="text-sm font-bold text-gray-800 leading-snug">刈谷 高校で事故再現の交通安全教室</p><p class="text-xs text-gray-400 mt-2">NHKニュース</p></div><div class="bg-white border border-gray-200 rounded-sm p-5 shadow-sm hover:shadow-md transition"><div class="flex items-center justify-between mb-2"><span class="inline-block bg-blue-900 text-white text-xs font-bold px-2.5 py-1 rounded-sm">滋賀県</span><span class="text-xs text-gray-400">2026.11</span></div><p class="text-sm font-bold text-gray-800 leading-snug">大津の中学校でスタントマンが再現</p><p class="text-xs text-gray-400 mt-2">Infoseek</p></div><div class="bg-white border border-gray-200 rounded-sm p-5 shadow-sm hover:shadow-md transition"><div class="flex items-center justify-between mb-2"><span class="inline-block bg-blue-900 text-white text-xs font-bold px-2.5 py-1 rounded-sm">沖縄県</span><span class="text-xs text-gray-400">2026.11</span></div><p class="text-sm font-bold text-gray-800 leading-snug">読谷高で交通安全教室 事故を再現</p><p class="text-xs text-gray-400 mt-2">琉球新報</p></div><div class="bg-white border border-gray-200 rounded-sm p-5 shadow-sm hover:shadow-md transition"><div class="flex items-center justify-between mb-2"><span class="inline-block bg-blue-900 text-white text-xs font-bold px-2.5 py-1 rounded-sm">鳥取県</span><span class="text-xs text-gray-400">2026.10</span></div><p class="text-sm font-bold text-gray-800 leading-snug">鳥取市 自転車事故の約3割が中高生</p><p class="text-xs text-gray-400 mt-2">日テレNEWS NNN</p></div><div class="bg-white border border-gray-200 rounded-sm p-5 shadow-sm hover:shadow-md transition"><div class="flex items-center justify-between mb-2"><span class="inline-block bg-blue-900 text-white text-xs font-bold px-2.5 py-1 rounded-sm">広島県</span><span class="text-xs text-gray-400">2026.10</span></div><p class="text-sm font-bold text-gray-800 leading-snug">吉島中学校 中学生が恐怖を間近で体感</p><p class="text-xs text-gray-400 mt-2">Yahoo!ニュース</p></div><div class="bg-white border border-gray-200 rounded-sm p-5 shadow-sm hover:shadow-md transition"><div class="flex items-center justify-between mb-2"><span class="inline-block bg-blue-900 text-white text-xs font-bold px-2.5 py-1 rounded-sm">佐賀県</span><span class="text-xs text-gray-400">2026.10</span></div><p class="text-sm font-bold text-gray-800 leading-snug">高校生が交通ルールの大切さを学ぶ</p><p class="text-xs text-gray-400 mt-2">サガテレビ</p></div><div class="bg-white border border-gray-200 rounded-sm p-5 shadow-sm hover:shadow-md transition"><div class="flex items-center justify-between mb-2"><span class="inline-block bg-blue-900 text-white text-xs font-bold px-2.5 py-1 rounded-sm">徳島県</span><span class="text-xs text-gray-400">2026.10</span></div><p class="text-sm font-bold text-gray-800 leading-snug">鳤門市の中学生200人が教室で学ぶ</p><p class="text-xs text-gray-400 mt-2">徳島新聞</p></div><div class="bg-white border border-gray-200 rounded-sm p-5 shadow-sm hover:shadow-md transition"><div class="flex items-center justify-between mb-2"><span class="inline-block bg-blue-900 text-white text-xs font-bold px-2.5 py-1 rounded-sm">静岡県</span><span class="text-xs text-gray-400">2026.10</span></div><p class="text-sm font-bold text-gray-800 leading-snug">袋井高で自転車事故を再現する交通教室</p><p class="text-xs text-gray-400 mt-2">静岡新聞DIGITAL</p></div><div class="bg-white border border-gray-200 rounded-sm p-5 shadow-sm hover:shadow-md transition"><div class="flex items-center justify-between mb-2"><span class="inline-block bg-blue-900 text-white text-xs font-bold px-2.5 py-1 rounded-sm">奈良県</span><span class="text-xs text-gray-400">2026.10</span></div><p class="text-sm font-bold text-gray-800 leading-snug">天理高校でプロのスタントマンが事故再現</p><p class="text-xs text-gray-400 mt-2">奈良テレビ放送</p></div>
@@ -717,6 +729,60 @@
     </section>
 
     <!-- Footer (Official Style) -->
+
+    <!-- Organization Profile -->
+    <section id="about-org" class="py-16 bg-white border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="mb-10 border-b border-gray-300 pb-2">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 font-serif flex items-center gap-3">
+                    <div class="w-2 h-8 bg-blue-900"></div>
+                    団体概要
+                </h2>
+                <p class="text-xs text-gray-500 font-bold tracking-widest mt-1 ml-5 pl-0.5">ABOUT US</p>
+            </div>
+            <div class="max-w-3xl mx-auto border border-gray-300 rounded-sm overflow-hidden">
+                <dl class="divide-y divide-gray-200 text-sm md:text-base">
+                    <div class="flex flex-col md:flex-row md:items-start gap-1 md:gap-0 p-4 md:p-5">
+                        <dt class="md:w-40 shrink-0 font-bold text-gray-600">名称</dt>
+                        <dd class="text-gray-900">一般社団法人ジャパンアクションギルド<br/><span class="text-xs text-gray-500">JAPAN ACTION GUILD</span></dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-1 md:gap-0 p-4 md:p-5 bg-gray-50">
+                        <dt class="md:w-40 shrink-0 font-bold text-gray-600">代表者</dt>
+                        <dd class="text-gray-900">代表理事　矢部 大</dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-1 md:gap-0 p-4 md:p-5">
+                        <dt class="md:w-40 shrink-0 font-bold text-gray-600">発足</dt>
+                        <dd class="text-gray-900">2021年</dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-1 md:gap-0 p-4 md:p-5 bg-gray-50">
+                        <dt class="md:w-40 shrink-0 font-bold text-gray-600">所在地</dt>
+                        <dd class="text-gray-900">〒150-0043<br/>東京都渋谷区道玄坂1-10-8 渋谷道玄坂東急ビル2F-C</dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-1 md:gap-0 p-4 md:p-5">
+                        <dt class="md:w-40 shrink-0 font-bold text-gray-600">電話</dt>
+                        <dd class="text-gray-900">03-6276-3770<span class="text-xs text-gray-500">（平日 10:00〜17:00）</span></dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-1 md:gap-0 p-4 md:p-5 bg-gray-50">
+                        <dt class="md:w-40 shrink-0 font-bold text-gray-600">メール</dt>
+                        <dd class="text-gray-900">contact@japanactionguild.jp</dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-1 md:gap-0 p-4 md:p-5">
+                        <dt class="md:w-40 shrink-0 font-bold text-gray-600">事業内容</dt>
+                        <dd class="text-gray-900">交通安全教育事業（スケアード・ストレート方式の交通安全教室）／アクション製作の振興・人材育成／アクション業界の労働環境・労災保険の整備　ほか</dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-1 md:gap-0 p-4 md:p-5 bg-gray-50">
+                        <dt class="md:w-40 shrink-0 font-bold text-gray-600">発起人</dt>
+                        <dd class="text-gray-900">大内貴仁・下村勇二・多加野詩子・谷垣健治・辻井啓伺・矢部 大・横山 誠（五十音順）</dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-1 md:gap-0 p-4 md:p-5">
+                        <dt class="md:w-40 shrink-0 font-bold text-gray-600">公式サイト</dt>
+                        <dd><a href="https://japanactionguild.jp/" target="_blank" class="text-blue-900 font-bold hover:underline">https://japanactionguild.jp/</a></dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
     <footer class="bg-blue-900 text-white py-8 border-t-4 border-yellow-600">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
@@ -725,7 +791,7 @@
                     <p class="text-xs text-blue-200">Japan Action Guild - Traffic Safety Education Division</p>
                 </div>
                 <div class="flex gap-6 text-sm">
-                    <a href="#" class="hover:underline text-white">団体概要</a>
+                    <a href="#about-org" class="hover:underline text-white">団体概要</a>
                     <a href="#" class="hover:underline text-white">プライバシーポリシー</a>
                     <a href="#" class="hover:underline text-white">特定商取引法に基づく表記</a>
                 </div>
